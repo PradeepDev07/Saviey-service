@@ -1,0 +1,65 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+  background: #2a1d1d; /* important for hole illusion */
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+.ticket {
+  position: relative; /* VERY IMPORTANT */
+  width: 360px;
+  border-radius: 20px;
+  background: linear-gradient(180deg, #e46c6c, #2a1d1d);
+  color: white;
+  padding: 32px 20px;
+}
+
+.ticket::before,
+.ticket::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background: #f3f3f3; /* SAME as body background */
+  border-radius: 50%;
+  top: 65%;
+  transform: translateY(-50%);
+}
+
+.ticket::before {
+  left: -12px; /* half outside */
+}
+
+.ticket::after {
+  right: -12px;
+}
+
+.ticket-divider {
+  height: 2px;
+  background: repeating-linear-gradient(
+    to right,
+    rgba(255,255,255,0.8),
+    rgba(255,255,255,0.8) 8px, /* dash length */
+    transparent 8px,
+    transparent 16px        /* gap size */
+  );
+  margin: 24px 0;
+}
+
+
+.claim-btn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+

@@ -1,0 +1,23 @@
+.con {
+padding: 0.5rem 1rem;
+border-radius: 5px;
+border: 1px solid #ccc;
+background: #f9f9f9;
+cursor: pointer;
+color: #818A84;
+
+
+}
+.active{
+background: #27A873;
+color: white;
+border: none;
+
+}
+
+.container{
+    display: flex;
+    gap: 5px;
+    overflow-x: auto;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,90 @@
+.RewardsPageContainer {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.RewardsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 12px;
+    padding-bottom: 30px;
+
+
+}
+
+.flex {
+    display: flex;
+
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+}
+
+.icon {
+    width: clamp(20px, 5vw, 30px);
+    height: clamp(20px, 5vw, 30px);
+}
+
+.title {
+    font-size: clamp(24px, 5vw, 32px);
+    font-weight: 500;
+}
+
+.spaceBetween {
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+
+.p-x {
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.m-x {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.iconContainer {
+    gap: 10px;
+}
+
+
+.RewardsSection {
+
+    height: calc(100vh - 180px);
+
+    overflow-y: scroll;
+}
+
+.NavBarWrapper {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+
+@media (min-width: 600px) and (max-width: 899px) {
+    .RewardsContainer {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 8px;
+
+    }
+}
+
+@media (min-width: 900px) {
+    .RewardsContainer {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 12px;
+
+    }
+}
